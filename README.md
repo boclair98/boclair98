@@ -105,6 +105,16 @@ GitHub와 Tistory를 통해 학습 과정과 문제 해결 기록을 남기며, 
 - 평균 이동거리, 거리 편차, 리뷰 신뢰도를 반영한 추천 점수 계산
 - Thymeleaf와 JavaScript 기반 결과 탭, 거리 비교, 공유 문구 생성 UI 구현
 
+### [Weather](https://github.com/boclair98/Weather)
+
+날씨 정보를 기반으로 구독자에게 맞춤형 메일을 발송하는 Spring Boot 웹 서비스입니다.
+
+- 날씨 API 연동을 통한 지역별 날씨 데이터 조회
+- 구독자 이메일 등록 및 지역 기반 메일 발송 흐름 구현
+- JavaMailSender 기반 이메일 전송 기능 구현
+- `@Async`를 활용한 메일 발송 비동기 처리 구조 적용
+- 구독자 증가를 고려한 Queue, Batch, 발송 지연 개선 방향 설계
+
 ### [Question](https://github.com/boclair98/Question)
 
 Spring Boot 기반 직무 맞춤형 면접 시뮬레이션 서비스입니다.
