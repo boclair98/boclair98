@@ -78,7 +78,6 @@ GitHub와 Tistory를 통해 학습 과정과 문제 해결 기록을 남기며, 
 ### Data / AI / DX
 
 - Python, Pandas, Numpy, Streamlit을 활용해 데이터 분석과 대시보드 구축을 수행했습니다.
-- KT AIVLE SCHOOL AI 및 DX 엔지니어 과정을 통해 데이터 전처리, 예측 모델링, DX 서비스 아키텍처를 경험했습니다.
 - 해수 담수화 공정 데이터를 분석하고 선형회귀 기반 전력 수요 예측 및 시각화 대시보드를 구현했습니다.
 
 ### Frontend / App
@@ -144,7 +143,7 @@ Java 17, Spring Boot, JPA 기반 이커머스 도메인 백엔드 프로젝트�
 
 ### Career & Admission Mentoring Platform
 
-진로 및 입시 상담을 위한 멘토링 플랫폼 프로젝트입니다.
+진로 및 상담을 위한 멘토링 플랫폼 프로젝트입니다.
 
 - Spring Boot, JPA 기반 확장 가능한 백엔드 아키텍처 설계
 - WebSocket 기반 실시간 채팅 서비스와 계층형 게시판 구현
@@ -173,23 +172,12 @@ Android 기반 멀티미디어 창작 및 스트리밍 서비스입니다.
   - Oracle, Java 기반 후불 요금제 개발
   - Oracle 기반 할인 적용 로직 개발
 
-## Education
-
-- [2017.03-2023.02] 한신대학교 정보통신학부 졸업
-  - 학점: 3.8 / 4.5
-  - 졸업 작품: Android 음악 애플리케이션 개발, 데이터 분석 기반 해수 담수화 제안
-- [2023.01-2023.07] KT AIVLE SCHOOL AI 및 DX 엔지니어 과정 수료
-  - 840시간 집중 교육을 통한 AI 모델링, 데이터 분석, DX 실무 프로세스 이수
-- [2023.03-2023.04] 자바오라클교육센터 Oracle Database 교육
-- [2022.03-2023.06] 자바오라클교육센터 WPF 애플리케이션 개발 역량 과정
-
 ## Certificates & Awards
 
 - 정보처리기사, 한국산업인력공단 (2024.09)
 - SQL개발자(SQLD), 한국데이터베이스진흥센터 (2024.04)
 - 데이터분석준전문가(ADsP), 한국데이터베이스진흥원 (2023.03)
 - 리눅스마스터 2급 필기합격, 한국정보통신인력개발센터 (2025.02)
-- KT AIVLE SCHOOL Practical 빅 프로젝트 수상 (2023.07)
 - TOEIC Speaking Test 110 / Intermediate Mid 1 (2024.09)
 
 ## Algorithm
