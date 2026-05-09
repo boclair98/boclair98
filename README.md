@@ -78,6 +78,7 @@ GitHub와 Tistory를 통해 학습 과정과 문제 해결 기록을 남기며, 
 ### Data / AI / DX
 
 - Python, Pandas, Numpy, Streamlit을 활용해 데이터 분석과 대시보드 구축을 수행했습니다.
+- KT AIVLE SCHOOL AI 및 DX 엔지니어 과정을 통해 데이터 전처리, 예측 모델링, DX 서비스 아키텍처를 경험했습니다.
 - 해수 담수화 공정 데이터를 분석하고 선형회귀 기반 전력 수요 예측 및 시각화 대시보드를 구현했습니다.
 
 ### Frontend / App
@@ -172,12 +173,18 @@ Android 기반 멀티미디어 창작 및 스트리밍 서비스입니다.
   - Oracle, Java 기반 후불 요금제 개발
   - Oracle 기반 할인 적용 로직 개발
 
+## Training
+
+- [2023.01-2023.07] KT AIVLE SCHOOL AI 및 DX 엔지니어 과정 수료
+  - 840시간 집중 교육을 통한 AI 모델링, 데이터 분석, DX 실무 프로세스 이수
+
 ## Certificates & Awards
 
 - 정보처리기사, 한국산업인력공단 (2024.09)
 - SQL개발자(SQLD), 한국데이터베이스진흥센터 (2024.04)
 - 데이터분석준전문가(ADsP), 한국데이터베이스진흥원 (2023.03)
 - 리눅스마스터 2급 필기합격, 한국정보통신인력개발센터 (2025.02)
+- KT AIVLE SCHOOL Practical 빅 프로젝트 수상 (2023.07)
 - TOEIC Speaking Test 110 / Intermediate Mid 1 (2024.09)
 
 ## Algorithm
