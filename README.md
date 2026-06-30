@@ -101,7 +101,7 @@ Thymeleaf, JavaScript, HTML5, Git, GitHub, IntelliJ IDEA
 - 정보처리기사, 2024.09
 - SQLD, 2024.04
 - ADsP, 2023.03
-- 리눅스마스터 2급 필기합격, 2025.02
+- 리눅스마스터 2급, 2026.07
 - TOEIC Speaking 110 / Intermediate Mid 1, 2024.09
 
 ## Algorithm & Stats
