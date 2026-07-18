@@ -1,97 +1,110 @@
 <div align="center">
 
-# 이희승 | Backend Developer
+<img src="./assets/profile-header.png" width="100%" alt="어두운 작업 공간과 노트북이 있는 개발자 프로필 헤더" />
 
-사용자의 흐름을 이해하고, 서비스가 안정적으로 움직이도록 설계하는 백엔드 개발자입니다.
+# 이희승
 
-[![GitHub](https://img.shields.io/badge/GitHub-boclair98-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/boclair98)
-[![Blog](https://img.shields.io/badge/Blog-boclair98.tistory.com-FF5A4A?style=flat-square&logo=tistory&logoColor=white)](https://boclair98.tistory.com/)
-[![Email](https://img.shields.io/badge/Email-boclair98@naver.com-03C75A?style=flat-square&logo=naver&logoColor=white)](mailto:boclair98@naver.com)
-[![Solved.ac](https://img.shields.io/badge/Solved.ac-boclair98-0076C0?style=flat-square)](https://solved.ac/profile/boclair98)
-[![Portfolio](https://img.shields.io/badge/Portfolio-PDF-0A66C2?style=flat-square&logo=adobeacrobatreader&logoColor=white)](portfolio/LeeHeeSeung_Portfolio.pdf)
+### Backend Developer
+
+사용 흐름을 이해하고, 데이터가 안정적으로 움직이는 서비스를 만듭니다.
+
+[![Blog](https://img.shields.io/badge/Study_Blog-22272E?style=for-the-badge&logo=tistory&logoColor=white)](https://boclair98.tistory.com/)
+[![Email](https://img.shields.io/badge/Email-22272E?style=for-the-badge&logo=naver&logoColor=03C75A)](mailto:boclair98@naver.com)
+[![Solved.ac](https://img.shields.io/badge/Solved.ac-22272E?style=for-the-badge&logo=solveddotac&logoColor=17CE3A)](https://solved.ac/profile/boclair98)
+[![Portfolio](https://img.shields.io/badge/Portfolio-22272E?style=for-the-badge&logo=adobeacrobatreader&logoColor=EC1C24)](portfolio/LeeHeeSeung_Portfolio.pdf)
 
 </div>
 
----
+<br />
 
-## About
+## About me
 
-Java와 Spring Boot를 중심으로 REST API, 인증/인가, 데이터 조회 흐름, 비즈니스 로직을 구현합니다.
+Java와 Spring Boot를 중심으로 REST API, 인증·인가, 데이터 조회와 비즈니스 로직을 구현하고 있습니다. 기능을 빠르게 붙이는 것보다 책임을 나누고 트랜잭션 경계와 데이터 일관성을 지키는 구조를 고민합니다.
 
-단순히 기능을 완성하는 것보다 사용자가 어떤 맥락에서 서비스를 쓰는지, 데이터가 어떤 상태로 흘러야 안전한지, 이후 변경이 들어왔을 때 구조가 버틸 수 있는지를 함께 봅니다. Controller, Service, Repository의 책임을 나누고 트랜잭션 경계와 데이터 일관성을 고려하는 개발을 지향합니다.
+공부하면서 막혔던 부분과 직접 확인한 결과는 [기술 블로그](https://boclair98.tistory.com/)에 꾸준히 기록하고 있습니다.
 
-최근에는 약속 장소 추천, 날씨 기반 메일 발송, 면접 시뮬레이션처럼 실제 사용자 흐름이 있는 서비스를 만들며 백엔드 설계와 제품 경험 사이의 연결을 연습하고 있습니다.
+## Tech
 
-## What I Care About
+<div align="center">
 
-- 사용자가 막히지 않는 자연스러운 서비스 흐름
-- 도메인 규칙이 코드 안에서 분명하게 드러나는 구조
-- JPA, Querydsl, SQL을 활용한 안정적인 데이터 조회와 변경
-- 인증, 권한, 상태 관리처럼 서비스 신뢰도에 직접 연결되는 영역
-- 작게 만들고, 원인을 추적하고, 개선 과정을 기록하는 습관
+![Java](https://img.shields.io/badge/Java-22272E?style=flat-square&logo=openjdk&logoColor=ED8B00)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-22272E?style=flat-square&logo=springboot&logoColor=6DB33F)
+![Spring Security](https://img.shields.io/badge/Spring_Security-22272E?style=flat-square&logo=springsecurity&logoColor=6DB33F)
+![JPA](https://img.shields.io/badge/JPA-22272E?style=flat-square&logo=hibernate&logoColor=BC9B6A)
+![Querydsl](https://img.shields.io/badge/Querydsl-22272E?style=flat-square&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-22272E?style=flat-square&logo=mysql&logoColor=4479A1)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-22272E?style=flat-square&logo=postgresql&logoColor=4169E1)
+![Oracle](https://img.shields.io/badge/Oracle-22272E?style=flat-square&logo=oracle&logoColor=F80000)
+![Python](https://img.shields.io/badge/Python-22272E?style=flat-square&logo=python&logoColor=3776AB)
+![Git](https://img.shields.io/badge/Git-22272E?style=flat-square&logo=git&logoColor=F05032)
 
-## Tech Stack
+</div>
 
-**Backend**  
-Java 17, Spring Boot, Spring MVC, Spring Data JPA, Querydsl, Spring Security, JWT, MyBatis
+## Projects
 
-**Database**  
-MySQL, PostgreSQL, Oracle, SQL
-
-**Data / AI**  
-Python, Pandas, Numpy, Scikit-learn, Streamlit
-
-**Web / Tools**  
-Thymeleaf, JavaScript, HTML5, Git, GitHub, IntelliJ IDEA
-
-## Product Projects
+<table>
+<tr>
+<td width="50%" valign="top">
 
 ### [MeetPlace](https://github.com/boclair98/MeetPlace)
 
-여러 명이 만날 때 출발지와 원하는 장소 카테고리를 기준으로 실제 약속 장소를 추천하는 Spring Boot 웹 서비스입니다.
+여러 사람의 출발지를 기준으로 약속 장소를 추천하는 Spring Boot 서비스입니다.
 
-- 참가자 출발 좌표를 기반으로 중간 지점 계산
-- Kakao Local API와 Google Places API를 활용한 장소 정보 보강
-- 평균 이동거리, 거리 편차, 리뷰 신뢰도를 반영한 추천 점수 설계
-- 결과 탭, 거리 비교, 공유 문구 생성 등 사용 흐름 중심의 UI 구현
+- 중간 지점 계산 및 장소 API 연동
+- 이동거리·거리 편차·리뷰를 반영한 추천 점수
+- 결과 비교와 공유 흐름 구현
+
+</td>
+<td width="50%" valign="top">
 
 ### [Weather](https://github.com/boclair98/Weather)
 
-지역별 날씨 정보를 기반으로 구독자에게 맞춤형 메일을 발송하는 서비스입니다.
+지역별 날씨를 확인하고 구독자에게 맞춤 메일을 발송하는 서비스입니다.
 
-- 날씨 API 연동 및 지역 기반 구독자 관리
-- JavaMailSender 기반 메일 발송 기능 구현
-- `@Async`를 활용한 비동기 발송 구조 적용
-- 구독자 증가를 고려한 Queue, Batch 개선 방향 설계
+- 날씨 API와 지역 기반 구독 관리
+- JavaMailSender 기반 메일 발송
+- `@Async` 비동기 처리 적용
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
 
 ### [Question](https://github.com/boclair98/Question)
 
-직무 맞춤형 면접 질문과 응답 타이머를 제공하는 Spring Boot 기반 면접 시뮬레이션 서비스입니다.
+직무별 질문과 응답 타이머를 제공하는 면접 연습 서비스입니다.
 
-- 직무별 질문 제공 및 40초 응답 타이머 구현
-- Spring Security, JWT 기반 인증 구조 설계
-- Querydsl 기반 동적 조회와 REST API 구현
-- 면접 경험 공유를 위한 커뮤니티형 데이터 구조 설계
+- Spring Security·JWT 인증
+- Querydsl 동적 조회 및 REST API
+- 면접 경험 공유 데이터 구조 설계
 
-### [haesudamsuhwa_project_streamlit](https://github.com/boclair98/haesudamsuhwa_project_streamlit)
+</td>
+<td width="50%" valign="top">
 
-해수 담수화 공정 데이터를 분석하고 전력 사용량을 예측하는 Streamlit 대시보드입니다.
+### [Desalination Dashboard](https://github.com/boclair98/haesudamsuhwa_project_streamlit)
 
-- Pandas, Numpy 기반 데이터 전처리 및 분석
+해수 담수화 공정 데이터와 전력 사용량을 분석하는 Streamlit 대시보드입니다.
+
+- Pandas·Numpy 기반 데이터 전처리
 - 선형회귀 기반 전력 수요 예측
-- 공정 데이터 모니터링 및 시각화 대시보드 구현
+- 공정 데이터 시각화
 
-## Experience & Growth
+</td>
+</tr>
+</table>
 
-**알앤비소프트 IT 서비스 본부 | SI 개발 및 빌링 개발**  
-2024.04 - 2024.07
+## Experience
 
-- Oracle, Java 기반 후불 요금제 개발
-- Oracle 기반 할인 적용 로직 개발
-- 데이터 중심 비즈니스 로직의 정확성과 예외 흐름 경험
+### 알앤비소프트 · IT 서비스 본부
 
-**KT AIVLE SCHOOL AI / DX 엔지니어 과정**  
-2023.01 - 2023.07
+`2024.04 - 2024.07` · SI 및 빌링 개발
+
+- Java와 Oracle 기반 후불 요금제·할인 적용 로직 개발
+- 데이터 중심 비즈니스 로직과 예외 흐름 경험
+
+### KT AIVLE SCHOOL
+
+`2023.01 - 2023.07` · AI / DX 엔지니어 과정
 
 - 840시간 집중 교육 수료
 - AI 모델링, 데이터 분석, DX 서비스 아키텍처 학습
@@ -99,20 +112,18 @@ Thymeleaf, JavaScript, HTML5, Git, GitHub, IntelliJ IDEA
 
 ## Certificates
 
-- 정보처리기사, 2024.09
-- SQLD, 2024.04
-- ADsP, 2023.03
-- 리눅스마스터 2급, 2026.07
-- TOEIC Speaking 110 / Intermediate Mid 1, 2024.09
+`정보처리기사` `SQLD` `ADsP` `리눅스마스터 2급`
 
-## Algorithm & Stats
+## 기록
 
 <div align="center">
 
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=boclair98)](https://solved.ac/profile/boclair98)
+[![Solved.ac Profile](https://mazassumnida.wtf/api/v2/generate_badge?boj=boclair98)](https://solved.ac/profile/boclair98)
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=boclair98&show_icons=true&theme=default&hide_border=true)
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=boclair98&show_icons=true&hide_border=true&theme=github_dark_dimmed&rank_icon=github" alt="GitHub 통계" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=boclair98&layout=compact&hide_border=true&theme=github_dark_dimmed" alt="주요 언어" />
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=boclair98&layout=compact&hide_border=true)
+<sub>배운 것을 기록하고, 기록한 것을 다시 꺼내 씁니다.</sub>
 
 </div>
+
