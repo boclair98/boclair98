@@ -1,18 +1,14 @@
 <div align="center">
 
-<img src="./assets/profile-header.png" width="100%" alt="이희승 개발자 프로필 헤더" />
+<img src="./assets/profile-header.png" width="100%" alt="서비스 운영 포트폴리오 헤더" />
 
-# 이희승 | 서비스가 실제로 쓰이도록 만드는 개발자
+# Build · Deploy · Operate
 
-기능 구현에서 끝나지 않고, **배포·운영·오류 대응까지 연결되는 웹 서비스**를 만들고 있습니다.
+**실제 사용 흐름을 만들고, 배포 후에도 안정적으로 운영하는 서비스 포트폴리오**입니다.
 
 <a href="https://stockpilot.coders.kr"><img src="https://img.shields.io/badge/StockPilot-운영_중-2563EB?style=for-the-badge&logo=googlechrome&logoColor=white" alt="StockPilot 운영 사이트" /></a>
 <a href="https://saldobook.coders.kr"><img src="https://img.shields.io/badge/Saldobook-운영_중-0F766E?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Saldobook 운영 사이트" /></a>
 <a href="https://weather.coders.kr"><img src="https://img.shields.io/badge/날씨한편-운영_중-0284C7?style=for-the-badge&logo=googlechrome&logoColor=white" alt="날씨한편 운영 사이트" /></a>
-
-[![Blog](https://img.shields.io/badge/Study_Blog-22272E?style=flat-square&logo=tistory&logoColor=white)](https://boclair98.tistory.com/)
-[![Email](https://img.shields.io/badge/Email-22272E?style=flat-square&logo=naver&logoColor=03C75A)](mailto:boclair98@naver.com)
-[![Solved.ac](https://img.shields.io/badge/Solved.ac-22272E?style=flat-square&logo=solveddotac&logoColor=17CE3A)](https://solved.ac/profile/boclair98)
 
 </div>
 
@@ -115,20 +111,25 @@
 
 ---
 
-## Engineering Focus
+## Tech Stack
 
-- 외부 API, 인증, 데이터, 비동기 작업을 연결한 실제 사용자 흐름 설계
-- Java·Spring Boot 기반 REST API와 서비스 계층 중심의 비즈니스 로직 구현
-- PostgreSQL·MySQL, JPA, Querydsl, Flyway를 활용한 데이터 신뢰성 관리
-- Redis 캐시, 장애 시 대체 흐름, health check 등 운영 안정성 고려
-- 사용자에게 이해되는 오류 메시지와 재현 가능한 문제 해결 기록
+| 영역 | 사용 기술 |
+| --- | --- |
+| **Backend** | Java 17/21, Spring Boot, Spring MVC, Spring Data JPA, Spring Security, JWT, Querydsl, Gradle |
+| **Frontend** | TypeScript, JavaScript, Next.js, React, Thymeleaf, HTML, CSS |
+| **Data** | PostgreSQL, MySQL, H2, Redis, Flyway, JPA, SQL |
+| **External & Auth** | OAuth 2.0, Kakao Local API, KIS Open API, OpenDART, 기상청 API, 금융결제원 오픈뱅킹 |
+| **Infra & Operation** | Docker, GitHub Actions, health check, graceful shutdown, cache, distributed scheduler lock |
+| **Data/AI** | Python, Pandas, NumPy, scikit-learn, Streamlit, Plotly |
 
 <p>
   <img src="https://img.shields.io/badge/Java-22272E?style=flat-square&logo=openjdk&logoColor=ED8B00" alt="Java" />
   <img src="https://img.shields.io/badge/Spring_Boot-22272E?style=flat-square&logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/PostgreSQL-22272E?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/Redis-22272E?style=flat-square&logo=redis&logoColor=DC382D" alt="Redis" />
   <img src="https://img.shields.io/badge/Next.js-22272E?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js" />
+  <img src="https://img.shields.io/badge/PostgreSQL-22272E?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL" />
+  <img src="https://img.shields.io/badge/MySQL-22272E?style=flat-square&logo=mysql&logoColor=4479A1" alt="MySQL" />
+  <img src="https://img.shields.io/badge/Redis-22272E?style=flat-square&logo=redis&logoColor=DC382D" alt="Redis" />
+  <img src="https://img.shields.io/badge/Docker-22272E?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker" />
   <img src="https://img.shields.io/badge/Python-22272E?style=flat-square&logo=python&logoColor=3776AB" alt="Python" />
 </p>
 
@@ -136,9 +137,6 @@
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=boclair98&show_icons=true&hide_border=true&theme=github_dark_dimmed&rank_icon=github" alt="GitHub 통계" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=boclair98&layout=compact&hide_border=true&theme=github_dark_dimmed" alt="주요 언어" />
-
-<sub>사용자가 실제로 쓰는 흐름을 만들고, 운영하며, 더 나은 경험으로 고도화합니다.</sub>
+<sub>Build · Deploy · Operate</sub>
 
 </div>
