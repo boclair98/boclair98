@@ -11,7 +11,7 @@
 
 <p>
   <a href="#live-services"><img src="https://img.shields.io/badge/LIVE_SERVICES-6-22C55E?style=for-the-badge&labelColor=0B1220" alt="운영 서비스 6개" /></a>
-  <a href="https://github.com/boclair98?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC_REPOSITORIES-21-60A5FA?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220" alt="공개 저장소 21개" /></a>
+  <a href="https://github.com/boclair98?tab=repositories"><img src="https://img.shields.io/badge/PUBLIC_REPOSITORIES-26-60A5FA?style=for-the-badge&logo=github&logoColor=white&labelColor=0B1220" alt="공개 저장소 26개" /></a>
   <a href="https://boclair98.tistory.com/"><img src="https://img.shields.io/badge/TECH_NOTES-95-F97316?style=for-the-badge&logo=tistory&logoColor=white&labelColor=0B1220" alt="기술 블로그 95개 글" /></a>
 </p>
 
