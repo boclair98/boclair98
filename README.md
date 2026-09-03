@@ -10,9 +10,14 @@
 아이디어를 화면에만 남기지 않고 API, 데이터베이스, 배포, 모니터링과 장애 대응까지 연결합니다.
 
 <p>
-  <a href="#product-index"><img src="https://img.shields.io/badge/PUBLIC_DEPLOYMENTS-9-22C55E?style=for-the-badge&labelColor=0B1220" alt="공개 배포 9개" /></a>
-  <a href="#engineering"><img src="https://img.shields.io/badge/BUILD_%E2%86%92_DEPLOY_%E2%86%92_OPERATE-END_TO_END-60A5FA?style=for-the-badge&labelColor=0B1220" alt="Build Deploy Operate" /></a>
-  <a href="https://boclair98.tistory.com/"><img src="https://img.shields.io/badge/ENGINEERING-NOTES-F97316?style=for-the-badge&logo=tistory&logoColor=white&labelColor=0B1220" alt="기술 블로그" /></a>
+  <a href="https://stockpilot.coders.kr"><img src="https://img.shields.io/badge/FLAGSHIP_01-STOCKPILOT-2563EB?style=for-the-badge&logo=chartdotjs&logoColor=white&labelColor=0B1220" alt="대표 서비스 StockPilot" /></a>
+  <a href="https://morningnews.coders.kr"><img src="https://img.shields.io/badge/FLAGSHIP_02-ACHIM_GYEOL-F97316?style=for-the-badge&logo=rss&logoColor=white&labelColor=0B1220" alt="대표 서비스 아침결" /></a>
+</p>
+
+<p>
+  <a href="#featured-systems"><img src="https://img.shields.io/badge/PUBLIC_DEPLOYMENTS-9-22C55E?style=flat-square&labelColor=0B1220" alt="공개 배포 9개" /></a>
+  <a href="#engineering"><img src="https://img.shields.io/badge/BUILD_%E2%86%92_DEPLOY_%E2%86%92_OPERATE-END_TO_END-60A5FA?style=flat-square&labelColor=0B1220" alt="Build Deploy Operate" /></a>
+  <a href="https://boclair98.tistory.com/"><img src="https://img.shields.io/badge/ENGINEERING-NOTES-F97316?style=flat-square&logo=tistory&logoColor=white&labelColor=0B1220" alt="기술 블로그" /></a>
 </p>
 
 <p>
@@ -25,9 +30,9 @@
 </p>
 
 <p>
-  <a href="#featured-systems"><b>Featured Systems</b></a>
+  <a href="#flagship-products"><b>Flagship Products</b></a>
   &nbsp;·&nbsp;
-  <a href="#product-index"><b>All Deployments</b></a>
+  <a href="#featured-systems"><b>More Systems</b></a>
   &nbsp;·&nbsp;
   <a href="#engineering"><b>Engineering</b></a>
   &nbsp;·&nbsp;
@@ -40,36 +45,9 @@
 
 ---
 
-<h2 id="profile">01 · Engineering Profile</h2>
+<h2 id="flagship-products">01 · Flagship Products</h2>
 
-- **Product Delivery** — 요구사항을 기능 목록으로 끝내지 않고 **사용자의 시작부터 결과 확인까지** 하나의 흐름으로 완성합니다.
-- **Backend & Data** — 인증, 권한, 트랜잭션, 멱등성, 데이터 격리와 **정합성 보장**을 서비스의 기본값으로 다룹니다.
-- **Realtime & Integration** — WebSocket·WebRTC와 금융·공공·지도·OAuth API를 실제 제품 흐름에 연결합니다.
-- **Production Operations** — 컨테이너 배포, 상태 점검, 캐시, 관측성, 백업, CI와 **장애 대응 경계**까지 설계합니다.
-
-> 기능의 개수보다 **데이터가 틀리지 않는가, 실패해도 복구 가능한가, 운영자가 원인을 추적할 수 있는가**를 중요하게 봅니다.
-
----
-
-<h2 id="product-index">02 · Public Deployments</h2>
-
-공개 배포 주소와 소스 코드를 함께 제공합니다. 각 저장소에는 설계 범위, 실행 방법, 운영 경계와 검증 내용을 문서화했습니다.
-
-- **StockPilot** — 실제 시세 기반 가상투자 · 원장 정합성 · 멱등 주문 · Redis · WebSocket<br />[Public Service ↗](https://stockpilot.coders.kr) · [Source Code](https://github.com/boclair98/stockpilot)
-- **MORROW** — 상호 매칭 · 실시간 채팅 · OAuth · 동시성 제어 · 사진 검수 · 신고/차단 운영<br />[Public Service ↗](https://morrow.coders.kr) · [Source Code](https://github.com/boclair98/morrow)
-- **HYUNDAI LIFE PASS** <sub>비공식 포트폴리오 파일럿</sub> — 커넥티드 카 · 동의 기반 데이터 · 충전소/서비스 거점 · 차량 여권 · OTA Canary<br />[Public Pilot ↗](https://hyundai-life-pass.coders.kr) · [Source Code](https://github.com/boclair98/hyundai-life-pass)
-- **YieldScope P&T** <sub>100% 합성 데이터</sub> — 반도체 P&T · 수율/품질 · LOT 판정 · RCA/CAPA · 감사 로그<br />[Public Demo ↗](https://yieldscope-pnt.coders.kr) · [Source Code](https://github.com/boclair98/yieldscope-pnt)
-- **아침결** — 매일 07:30 뉴스 브리핑 · 다원화 수집 · PWA/Web Push · 발행 품질 · 운영 모니터<br />[Public Service ↗](https://morningnews.coders.kr) · [Source Code](https://github.com/boclair98/achim-gyeol)
-- **검은 자정** — 실시간 소셜 추리 · 서버 권위 상태 · WebSocket · WebRTC · Web/Android/iOS<br />[Public Game ↗](https://black-midnight.coders.kr) · [Source Code](https://github.com/boclair98/mafia-game)
-- **날씨한편** — 기상·대기질·장소 API · 이메일 구독 · 분산 스케줄 · circuit breaker · 관측성<br />[Public Service ↗](https://weather.coders.kr) · [Source Code](https://github.com/boclair98/Weather)
-- **Saldobook** — 개인 금융 기록 · 사용자 데이터 격리 · 선택적 오픈뱅킹 연동의 토큰 암호화·부분 실패 처리<br />[Public Service ↗](https://saldobook.coders.kr) · [Source Code](https://github.com/boclair98/saldobook)
-- **Trading Stock System** <sub>실주문 차단</sub> — 가격·시간 우선 매칭 · 주문 안전성 · WAL 재생 · 감사 이벤트<br />[Public Console ↗](https://tradingstocksysyem.coders.kr) · [Source Code](https://github.com/boclair98/TradingStockSysyem)
-
-<sub>모든 링크는 공개 배포 주소입니다. 점검 중인 서비스는 일시적으로 열리지 않을 수 있습니다.</sub>
-
----
-
-<h2 id="featured-systems">03 · Featured Systems</h2>
+가장 먼저 보여주고 싶은 두 제품입니다. 실제 사용자 흐름뿐 아니라 **정합성, 자동화, 운영 안정성**까지 직접 설계했습니다.
 
 ### 01. StockPilot — 실제 시세 기반 가상투자 · 학습 플랫폼
 
@@ -87,7 +65,24 @@
 
 <br />
 
-### 02. MORROW — 약속까지 이어지는 소셜 디스커버리
+### 02. 아침결 — 매일 07:30 뉴스 브리핑
+
+> 네이버 검색, GDELT와 공식기관 RSS를 함께 수집해 전날의 핵심 뉴스를 **한 줄 결론 → 배경 → 출처 → 다음 확인 포인트**로 전달합니다.
+
+- **Product** — 관심 분야·분량 설정, 지난 브리핑 보관함, 정정·신뢰센터와 PWA Web Push를 하나의 구독 흐름으로 구성했습니다.
+- **Backend** — Kotlin·Spring Boot API, Next.js PWA, PostgreSQL/Flyway와 다원화 뉴스 수집 파이프라인을 구현했습니다.
+- **Quality** — 공식 자료와 복수 출처에서 확인되는 사실을 우선하고, 기준을 충족하지 못하면 억지로 분야를 채우지 않도록 발행 품질을 분리했습니다.
+- **Operations** — 발행 전 검증, 운영 모니터, Playwright E2E·부하 스모크 테스트, 암호화 백업과 발행 중단·정정 runbook을 구성했습니다.
+
+`Kotlin` · `Java 21` · `Spring Boot` · `Next.js 16` · `React 19` · `PostgreSQL` · `Flyway` · `PWA` · `Playwright`
+
+**[오늘의 브리핑 읽기 ↗](https://morningnews.coders.kr)** · **[Source Code](https://github.com/boclair98/achim-gyeol)**
+
+---
+
+<h2 id="featured-systems">02 · Featured Systems</h2>
+
+### 03. MORROW — 약속까지 이어지는 소셜 디스커버리
 
 > 상호 관심 이후 **MORROW Sync → 실시간 채팅 → 장소·시간 제안 → 안전 확인**까지 이어지는 만 20세 이상 서비스입니다.
 
@@ -102,7 +97,7 @@
 
 <br />
 
-### 03. HYUNDAI LIFE PASS — Connected Car Life 파일럿
+### 04. HYUNDAI LIFE PASS — Connected Car Life 파일럿
 
 > 충전소, 현대자동차 서비스 거점, 동의 기반 차량 상태, 차량 여권과 **읽기 전용 OTA Canary Lab**을 연결한 모빌리티 파일럿입니다.
 
@@ -118,7 +113,7 @@
 
 <br />
 
-### 04. YieldScope P&T — 반도체 양산 품질 워크벤치
+### 05. YieldScope P&T — 반도체 양산 품질 워크벤치
 
 > Test Program qualification부터 **LOT 격리·판정 → FA/RCA → CAPA 검증 → 교대 인계**까지 재현한 합성 데이터 기반 P&T 품질 워크벤치입니다.
 
@@ -134,19 +129,7 @@
 
 ---
 
-<h2 id="more-products">04 · More Deployed Systems</h2>
-
-### 05. 아침결 — 매일 07:30 뉴스 브리핑
-
-네이버 검색, GDELT와 공식기관 RSS를 함께 수집해 전날의 핵심 뉴스를 한 줄 결론·배경·출처·다음 확인 포인트로 전달합니다.
-
-- **Engineering** — Kotlin·Spring Boot API, Next.js PWA, PostgreSQL/Flyway와 다원화 뉴스 수집 파이프라인
-- **Operations** — Web Push, 발행 전 품질 점검, 운영 모니터, Playwright E2E·부하 스모크 테스트, 암호화 백업과 정정 runbook
-- **Stack** — `Kotlin` · `Java 21` · `Spring Boot` · `Next.js` · `PostgreSQL` · `PWA` · `Playwright`
-
-**[브리핑 읽기 ↗](https://morningnews.coders.kr)** · **[Source Code](https://github.com/boclair98/achim-gyeol)**
-
-<br />
+<h2 id="more-products">03 · More Deployed Systems</h2>
 
 ### 06. 검은 자정 — 실시간 소셜 추리 게임
 
@@ -198,7 +181,7 @@
 
 ---
 
-<h2 id="engineering">05 · Engineering in Practice</h2>
+<h2 id="engineering">04 · Engineering in Practice</h2>
 
 - **Data Integrity** — 멱등 요청, 유일 제약, 추가 전용 이벤트, 원장 대사와 결정론적 재생<br />[StockPilot](https://github.com/boclair98/stockpilot) · [Trading System](https://github.com/boclair98/TradingStockSysyem)
 - **Concurrency** — 비관적 잠금, 사용자 쌍 유일성, DB 선저장 후 발행, 분산 lease와 중복 스케줄 완화<br />[MORROW](https://github.com/boclair98/morrow) · [StockPilot](https://github.com/boclair98/stockpilot)
@@ -211,7 +194,7 @@
 
 ---
 
-<h2 id="tech-stack">06 · Tech Stack</h2>
+<h2 id="tech-stack">05 · Tech Stack</h2>
 
 ### Backend & API
 
@@ -285,7 +268,7 @@
 
 ---
 
-<h2 id="selected-projects">07 · Selected Projects</h2>
+<h2 id="selected-projects">06 · Selected Projects</h2>
 
 - **[MeetPlace](https://github.com/boclair98/MeetPlace)** — 2~8명의 출발지에서 평균·최대 이동거리와 편차를 계산하고 Kakao Local·Google Places의 실제 장소를 점수화하는 약속 장소 추천 서비스
 - **[Question](https://github.com/boclair98/Question)** — 직무별 랜덤 질문, 질문 확인·답변 타이머, 세션 인증과 질문 기록을 구현한 면접 연습 서비스
@@ -293,7 +276,7 @@
 
 ---
 
-<h2 id="writing">08 · Engineering Notes</h2>
+<h2 id="writing">07 · Engineering Notes</h2>
 
 구현 결과만 남기지 않고 Java, Spring Boot, 데이터베이스, 인프라와 문제 해결 과정을 글과 코드로 기록합니다.
 
