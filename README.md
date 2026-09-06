@@ -18,7 +18,7 @@ PostgreSQL · Redis · WebSocket · Docker · GitHub Actions
 
 <p>
   <a href="#flagship-products"><b>대표 서비스</b></a> &nbsp; / &nbsp;
-  <a href="#service-directory"><b>전체 서비스</b></a> &nbsp; / &nbsp;
+  <a href="#service-directory"><b>운영 서비스</b></a> &nbsp; / &nbsp;
   <a href="#engineering"><b>코드 탐색</b></a> &nbsp; / &nbsp;
   <a href="#operations"><b>운영 문서</b></a> &nbsp; / &nbsp;
   <a href="#tech-stack"><b>기술 스택</b></a> &nbsp; / &nbsp;
@@ -52,7 +52,27 @@ PostgreSQL · Redis · WebSocket · Docker · GitHub Actions
 
 ---
 
-<h2 id="flagship-products">01 / 대표 서비스 · Flagship Systems</h2>
+<h2 id="service-directory">01 / 직접 운영하는 서비스 · Services</h2>
+
+직접 만들고 배포하며 개선하는 서비스들입니다. **어떤 서비스인지 먼저 살펴보고, 링크를 눌러 이용해 보세요.** 공개 파일럿·데모는 별도로 표시했습니다.
+
+| 서비스 | 어떤 서비스인가요? | 바로가기 |
+| :--- | :--- | :--- |
+| **StockPilot** | 실제 한·미 주식 시세로 가상투자하고, 투자일지와 리그로 학습하는 모의투자 서비스 | [모의투자 ↗](https://stockpilot.coders.kr) |
+| **아침결** | 매일 오전 7시 30분, 핵심 뉴스의 배경과 출처까지 정리해 전하는 뉴스 브리핑 | [오늘의 뉴스 ↗](https://morningnews.coders.kr) |
+| **MORROW** | 서로의 관심에서 매칭·실시간 대화·약속으로 이어지는 소셜 디스커버리 · 공개 포트폴리오 | [둘러보기 ↗](https://morrow.coders.kr) |
+| **날씨한편** | 위치와 활동에 맞는 날씨·대기질 정보를 확인하고, 원하는 시간에 이메일로 받는 날씨 브리핑 | [날씨 확인 ↗](https://weather.coders.kr) |
+| **살도 · Saldobook** | 수입·지출과 예산을 기록하고, 오늘 쓸 수 있는 금액과 월말 예상 지출을 확인하는 금융 기록장 | [가계부 열기 ↗](https://saldobook.coders.kr) |
+| **검은 자정** | 단서·음성 토론·투표로 진실을 추리하는 실시간 소셜 게임. 혼자서도 AI와 플레이 | [게임 시작 ↗](https://black-midnight.coders.kr) |
+| **HYUNDAI LIFE PASS** | 충전소·서비스 거점 탐색과 차량 관리 흐름을 연결한 커넥티드카 서비스 · 비공식 파일럿 | [파일럿 보기 ↗](https://hyundai-life-pass.coders.kr) |
+| **YieldScope P&T** | 반도체 LOT 판정부터 원인 분석·개선 조치·교대 인계까지 체험하는 품질 워크벤치 · 합성 데이터 데모 | [데모 보기 ↗](https://yieldscope-pnt.coders.kr) |
+| **Trading Stock System** | 주문 접수·매칭·체결·복구 과정을 살펴보는 매매체결 검증 콘솔 · 실주문 차단 | [콘솔 열기 ↗](https://tradingstocksysyem.coders.kr) |
+
+<sub>소스 코드와 상세 설계는 아래 대표 서비스 및 서비스별 설계에서 확인할 수 있습니다.</sub>
+
+---
+
+<h2 id="flagship-products">02 / 대표 서비스 · Flagship Systems</h2>
 
 가장 깊게 다듬고 있는 두 서비스입니다. **어떤 제품을 만들었는지, 내부에서 어떤 문제가 생기고 어떻게 풀었는지**를 함께 정리했습니다.
 
@@ -101,24 +121,6 @@ Ingestion → Quality Gate → Briefing API
 `Kotlin` · `Java 21` · `Spring Boot` · `Next.js 16` · `React 19` · `PostgreSQL` · `Flyway` · `PWA` · `Playwright`
 
 **[오늘의 브리핑 읽기 ↗](https://morningnews.coders.kr)** · **[Source Code](https://github.com/boclair98/achim-gyeol)**
-
----
-
-<h2 id="service-directory">02 / Service Directory</h2>
-
-직접 배포한 서비스와 공개 데모의 진입점입니다. 각 저장소에서 구현 범위와 실행 방법을 함께 확인할 수 있습니다.
-
-| 서비스 | 핵심 엔지니어링 | 바로가기 |
-| :--- | :--- | :--- |
-| **StockPilot** · 모의투자 | 주문 멱등성 · 원장 정합성 | [서비스](https://stockpilot.coders.kr) · [코드](https://github.com/boclair98/stockpilot) |
-| **아침결** · 뉴스 브리핑 | 수집·발행 파이프라인 · 품질 검증 | [서비스](https://morningnews.coders.kr) · [코드](https://github.com/boclair98/achim-gyeol) |
-| **MORROW** · 소셜 디스커버리 | 매칭 동시성 · 채팅 · 인증 | [서비스](https://morrow.coders.kr) · [코드](https://github.com/boclair98/morrow) |
-| **HYUNDAI LIFE PASS** · 비공식 파일럿 | OAuth 동의 · 공급자 어댑터 | [파일럿](https://hyundai-life-pass.coders.kr) · [코드](https://github.com/boclair98/hyundai-life-pass) |
-| **YieldScope P&T** · 합성 데이터 데모 | 품질 도메인 · 판정 이력 | [데모](https://yieldscope-pnt.coders.kr) · [코드](https://github.com/boclair98/yieldscope-pnt) |
-| **검은 자정** · 소셜 추리 게임 | 서버 권위 상태 · WebRTC | [게임](https://black-midnight.coders.kr) · [코드](https://github.com/boclair98/mafia-game) |
-| **날씨한편** · 날씨 브리핑 | 외부 API 장애 격리 · 분산 스케줄 | [서비스](https://weather.coders.kr) · [코드](https://github.com/boclair98/Weather) |
-| **살도** · 금융 기록 | 사용자 데이터 격리 · 인증 | [서비스](https://saldobook.coders.kr) · [코드](https://github.com/boclair98/saldobook) |
-| **Trading Stock System** · 검증 콘솔 | 매칭 코어 · WAL · 결정론적 재생 | [콘솔](https://tradingstocksysyem.coders.kr) · [코드](https://github.com/boclair98/TradingStockSysyem) |
 
 ---
 
