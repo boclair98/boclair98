@@ -1,63 +1,60 @@
 <div align="center">
 
-<code>BACKEND ENGINEERING · DATA INTEGRITY · OPERATIONS</code>
+<code>BOCLAIR98 / BACKEND & SERVICE ENGINEERING</code>
 
-<h1>Backend Engineering for Reliable Products</h1>
+<h1>코드에서 서비스까지.</h1>
 
-<h3>Java · Kotlin · Spring Boot / Python · FastAPI</h3>
-
-서비스를 직접 설계·배포·운영하며<br />
-<strong>트랜잭션 · 데이터 정합성 · 동시성 제어 · 실시간 처리 · 외부 API 장애 격리</strong>를 구현합니다.<br />
-PostgreSQL·Redis 기반 데이터 처리부터 Docker·CI, 상태 점검과 운영 관측까지 연결합니다.
+<p><strong>직접 만드는 서비스, 코드로 풀어낸 문제, 함께 나누는 개발 기록.</strong></p>
 
 <p>
-  <a href="https://stockpilot.coders.kr"><img src="https://img.shields.io/badge/FLAGSHIP_01-STOCKPILOT-2563EB?style=for-the-badge&logo=chartdotjs&logoColor=white&labelColor=0B1220" alt="대표 서비스 StockPilot" /></a>
-  <a href="https://morningnews.coders.kr"><img src="https://img.shields.io/badge/FLAGSHIP_02-ACHIM_GYEOL-F97316?style=for-the-badge&logo=rss&logoColor=white&labelColor=0B1220" alt="대표 서비스 아침결" /></a>
+Java · Kotlin · Spring Boot &nbsp;/&nbsp; Python · FastAPI<br />
+PostgreSQL · Redis · WebSocket · Docker · GitHub Actions
 </p>
 
 <p>
-  <img src="https://img.shields.io/badge/Java_%C2%B7_Kotlin-0B1220?style=flat-square&logo=openjdk&logoColor=ED8B00" alt="Java Kotlin" />
-  <img src="https://img.shields.io/badge/Spring_Boot-0B1220?style=flat-square&logo=springboot&logoColor=6DB33F" alt="Spring Boot" />
-  <img src="https://img.shields.io/badge/Python_%C2%B7_FastAPI-0B1220?style=flat-square&logo=python&logoColor=3776AB" alt="Python FastAPI" />
-  <img src="https://img.shields.io/badge/PostgreSQL_%C2%B7_Redis-0B1220?style=flat-square&logo=postgresql&logoColor=4169E1" alt="PostgreSQL Redis" />
-  <img src="https://img.shields.io/badge/Next.js_%C2%B7_TypeScript-0B1220?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js TypeScript" />
-  <img src="https://img.shields.io/badge/Docker_%C2%B7_CI-0B1220?style=flat-square&logo=docker&logoColor=2496ED" alt="Docker CI" />
+  <code>Data Integrity</code> · <code>Concurrency</code> · <code>Realtime</code><br />
+  <code>API Resilience</code> · <code>Observability</code> · <code>Recovery</code>
 </p>
 
 <p>
-  <code>Transactions</code>
-  · <code>Idempotency</code>
-  · <code>Concurrency</code>
-  · <code>Realtime</code>
-  · <code>Resilience</code>
-  · <code>Observability</code>
-</p>
-
-<p>
-  <a href="#flagship-products"><img src="https://img.shields.io/badge/PUBLIC_DEPLOYMENTS-9-22C55E?style=flat-square&labelColor=0B1220" alt="공개 배포 9개" /></a>
-  <a href="#engineering"><img src="https://img.shields.io/badge/BUILD_%E2%86%92_DEPLOY_%E2%86%92_OPERATE-END_TO_END-60A5FA?style=flat-square&labelColor=0B1220" alt="Build Deploy Operate" /></a>
-  <a href="https://boclair98.tistory.com/"><img src="https://img.shields.io/badge/ENGINEERING-NOTES-F97316?style=flat-square&logo=tistory&logoColor=white&labelColor=0B1220" alt="기술 블로그" /></a>
-</p>
-
-<p>
-  <a href="#flagship-products"><b>Flagship Systems</b></a>
-  &nbsp;·&nbsp;
-  <a href="#engineering"><b>Engineering</b></a>
-  &nbsp;·&nbsp;
-  <a href="#tech-stack"><b>Tech Stack</b></a>
-  &nbsp;·&nbsp;
-  <a href="#featured-systems"><b>Deployed Systems</b></a>
-  &nbsp;·&nbsp;
-  <a href="#writing"><b>Writing</b></a>
+  <a href="#flagship-products"><b>대표 서비스</b></a> &nbsp; / &nbsp;
+  <a href="#service-directory"><b>전체 서비스</b></a> &nbsp; / &nbsp;
+  <a href="#engineering"><b>코드 탐색</b></a> &nbsp; / &nbsp;
+  <a href="#operations"><b>운영 문서</b></a> &nbsp; / &nbsp;
+  <a href="#tech-stack"><b>기술 스택</b></a> &nbsp; / &nbsp;
+  <a href="https://boclair98.tistory.com/"><b>기술 블로그 ↗</b></a>
 </p>
 
 </div>
 
+<table>
+<tr>
+<td width="50%" valign="top">
+<sub>01 / FINTECH · PAPER TRADING</sub>
+<h3>StockPilot</h3>
+<p><strong>실제 시세로 배우는 모의투자</strong></p>
+<p>주문 멱등성 · 가상 원장 대사<br />실시간 시세 · 분산 캐시</p>
+<p><code>FastAPI</code> <code>PostgreSQL</code> <code>Redis</code></p>
+<p><a href="https://stockpilot.coders.kr"><strong>서비스 열기 ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/boclair98/stockpilot">코드</a></p>
+</td>
+<td width="50%" valign="top">
+<sub>02 / NEWS · DAILY BRIEFING</sub>
+<h3>아침결</h3>
+<p><strong>매일 07:30, 오늘의 뉴스 브리핑</strong></p>
+<p>뉴스 수집·품질 검증·발행<br />PWA 알림 · 정정·백업·복구</p>
+<p><code>Kotlin</code> <code>Spring Boot</code> <code>PostgreSQL</code></p>
+<p><a href="https://morningnews.coders.kr"><strong>브리핑 읽기 ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/boclair98/achim-gyeol">코드</a></p>
+</td>
+</tr>
+</table>
+
+<p align="center"><sub>API와 데이터 모델부터 검증·배포·장애 대응까지, 제품을 구성하는 기술을 직접 연결합니다.</sub></p>
+
 ---
 
-<h2 id="flagship-products">01 · Flagship Systems</h2>
+<h2 id="flagship-products">01 / 대표 서비스 · Flagship Systems</h2>
 
-두 제품을 중심으로 **데이터 정합성, 외부 API 통합, 자동화된 검증과 배포 이후의 운영 설계**를 보여줍니다.
+가장 깊게 다듬고 있는 두 서비스입니다. **어떤 제품을 만들었는지, 내부에서 어떤 문제가 생기고 어떻게 풀었는지**를 함께 정리했습니다.
 
 ### 01. StockPilot — 실제 시세 기반 가상투자 · 학습 플랫폼
 
@@ -107,20 +104,25 @@ Ingestion → Quality Gate → Briefing API
 
 ---
 
-<h2 id="engineering">02 · Backend & Systems Engineering</h2>
+<h2 id="service-directory">02 / Service Directory</h2>
 
-기술을 목록으로만 제시하지 않고, 실제 시스템에서 해결한 문제와 함께 보여줍니다.
+직접 배포한 서비스와 공개 데모의 진입점입니다. 각 저장소에서 구현 범위와 실행 방법을 함께 확인할 수 있습니다.
 
-- **Transactions & Data Integrity** — 멱등 요청, 유일 제약, 가상 원장 대사와 결정론적 재생<br />[StockPilot](https://github.com/boclair98/stockpilot) · [Trading Stock System](https://github.com/boclair98/TradingStockSysyem)
-- **Concurrency & Coordination** — 비관적 잠금, 사용자 쌍 유일성, DB 선저장 후 발행, Redis lease와 분산 스케줄 제어<br />[MORROW](https://github.com/boclair98/morrow) · [StockPilot](https://github.com/boclair98/stockpilot) · [날씨한편](https://github.com/boclair98/Weather)
-- **External API Resilience** — timeout·retry·circuit breaker·fallback, 캐시와 부분 실패 격리<br />[날씨한편](https://github.com/boclair98/Weather) · [StockPilot](https://github.com/boclair98/stockpilot) · [Saldobook](https://github.com/boclair98/saldobook)
-- **Security & Privacy** — OAuth 검증, 해시 세션, 사용자별 데이터 격리, 암호화 토큰과 동의 철회 기반 삭제<br />[MORROW](https://github.com/boclair98/morrow) · [Saldobook](https://github.com/boclair98/saldobook) · [Life Pass](https://github.com/boclair98/hyundai-life-pass)
-- **Realtime Systems** — WebSocket 시세·채팅·게임 상태와 WebRTC P2P 음성<br />[StockPilot](https://github.com/boclair98/stockpilot) · [MORROW](https://github.com/boclair98/morrow) · [검은 자정](https://github.com/boclair98/mafia-game)
-- **Delivery & Observability** — GitHub Actions, E2E·부하 검증, 상태 점검 엔드포인트, Actuator·Prometheus, 요청 ID, 백업과 운영 런북<br />[아침결](https://github.com/boclair98/achim-gyeol) · [날씨한편](https://github.com/boclair98/Weather) · [StockPilot](https://github.com/boclair98/stockpilot)
+| 서비스 | 핵심 엔지니어링 | 바로가기 |
+| :--- | :--- | :--- |
+| **StockPilot** · 모의투자 | 주문 멱등성 · 원장 정합성 | [서비스](https://stockpilot.coders.kr) · [코드](https://github.com/boclair98/stockpilot) |
+| **아침결** · 뉴스 브리핑 | 수집·발행 파이프라인 · 품질 검증 | [서비스](https://morningnews.coders.kr) · [코드](https://github.com/boclair98/achim-gyeol) |
+| **MORROW** · 소셜 디스커버리 | 매칭 동시성 · 채팅 · 인증 | [서비스](https://morrow.coders.kr) · [코드](https://github.com/boclair98/morrow) |
+| **HYUNDAI LIFE PASS** · 비공식 파일럿 | OAuth 동의 · 공급자 어댑터 | [파일럿](https://hyundai-life-pass.coders.kr) · [코드](https://github.com/boclair98/hyundai-life-pass) |
+| **YieldScope P&T** · 합성 데이터 데모 | 품질 도메인 · 판정 이력 | [데모](https://yieldscope-pnt.coders.kr) · [코드](https://github.com/boclair98/yieldscope-pnt) |
+| **검은 자정** · 소셜 추리 게임 | 서버 권위 상태 · WebRTC | [게임](https://black-midnight.coders.kr) · [코드](https://github.com/boclair98/mafia-game) |
+| **날씨한편** · 날씨 브리핑 | 외부 API 장애 격리 · 분산 스케줄 | [서비스](https://weather.coders.kr) · [코드](https://github.com/boclair98/Weather) |
+| **살도** · 금융 기록 | 사용자 데이터 격리 · 인증 | [서비스](https://saldobook.coders.kr) · [코드](https://github.com/boclair98/saldobook) |
+| **Trading Stock System** · 검증 콘솔 | 매칭 코어 · WAL · 결정론적 재생 | [콘솔](https://tradingstocksysyem.coders.kr) · [코드](https://github.com/boclair98/TradingStockSysyem) |
 
 ---
 
-<h2 id="tech-stack">03 · Tech Stack</h2>
+<h2 id="tech-stack">03 / Technical Stack</h2>
 
 ### Core Backend & API
 
@@ -187,7 +189,7 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 `Kakao · Naver · Google OAuth` · `KIS Open API` · `OpenDART` · `SEC EDGAR` · `금융결제원 테스트베드` · `Hyundai Developers` · `기상청` · `에어코리아` · `Kakao Local/Maps` · `Google Places` · `GDELT` · `Web Push / FCM`
 
-### Data · ML · Visualization — Project Experience
+### Data Tools · ML · Visualization — Project Experience
 
 <p>
   <img src="https://img.shields.io/badge/MySQL-PROJECT_EXPERIENCE-0B1220?style=flat-square&logo=mysql&logoColor=4479A1" alt="MySQL Project Experience" />
@@ -200,9 +202,53 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 ---
 
-<h2 id="featured-systems">04 · Selected Deployed Systems</h2>
+<h2 id="engineering">04 / Explore the Code · 궁금한 문제부터</h2>
 
-### 03. MORROW — 약속까지 이어지는 소셜 디스커버리
+처음 오셨다면 아래 질문에서 시작해 보세요. **개념을 정리한 글 → 서비스 구현 → 운영 문서**로 이어서 읽을 수 있습니다.
+
+| 궁금한 문제 | 살펴볼 구현 | 함께 읽기 |
+| :--- | :--- | :--- |
+| 같은 주문이 두 번 들어오면? | [StockPilot](https://github.com/boclair98/stockpilot)의 멱등 키·유일 제약·원장 대사 | [HTTP 멱등성](https://boclair98.tistory.com/113) |
+| 두 요청이 동시에 상태를 바꾸면? | [MORROW](https://github.com/boclair98/morrow)의 잠금·사용자 쌍 유일성·DB 저장 후 발행 | [트랜잭션 AOP](https://boclair98.tistory.com/132) |
+| 외부 API가 느리거나 멈추면? | [날씨한편](https://github.com/boclair98/Weather)의 timeout·circuit breaker·캐시·부분 실패 격리 | [운영 런북](https://github.com/boclair98/Weather/blob/main/docs/OPERATIONS.md) |
+| 실시간 정보는 누구에게까지 보여줄까? | [검은 자정](https://github.com/boclair98/mafia-game)의 서버 권위 상태·참가자별 정보 필터링·WebRTC | [StockPilot 시세 처리](https://github.com/boclair98/stockpilot) |
+| 실패한 배포·발행은 어떻게 수습할까? | [아침결](https://github.com/boclair98/achim-gyeol)의 품질 게이트·발행 중단·정정·복구 | [사고 대응 절차](https://github.com/boclair98/achim-gyeol/blob/main/docs/INCIDENT_RESPONSE.md) |
+| 같은 이벤트로 같은 결과를 복원할 수 있을까? | [Trading Stock System](https://github.com/boclair98/TradingStockSysyem)의 결정론적 코어·WAL·재생 검증 | [코어와 검증 범위](https://github.com/boclair98/TradingStockSysyem#readme) |
+
+<sub>링크는 각 저장소의 진입점과 관련 글입니다. 구현 범위와 제약도 각 프로젝트 설명에 함께 남겼습니다.</sub>
+
+---
+
+<h2 id="operations">05 / 운영을 코드와 문서로 남깁니다</h2>
+
+배포 이후에는 **실패를 감지하는 방법, 안전하게 멈추는 기준, 복구 후 확인할 항목**까지 다룹니다.
+
+### Protect / 정합성과 안전 경계
+
+StockPilot의 중복 주문 방지, 오래된 시세 차단, 주문 한도, 킬 스위치와 원장 대사 기준을 문서화했습니다.
+
+[주문 통제·도입 준비 기준 ↗](https://github.com/boclair98/stockpilot/blob/main/docs/BROKERAGE_READINESS.md)
+
+### Observe / 상태와 장애 원인 확인
+
+날씨한편은 liveness·readiness, 외부 API 지표와 원천자료의 시각을 구분하고, 마지막 정상자료 사용과 실패 응답의 기준을 운영 런북에 정리했습니다.
+
+[상태 점검·장애 대응·배포와 롤백 ↗](https://github.com/boclair98/Weather/blob/main/docs/OPERATIONS.md)
+
+### Recover / 중단·정정·복구
+
+아침결은 발행 중단과 정정 절차, 실패한 발송 재시도, 암호화 백업과 격리된 DB에서의 복구 검증 절차를 갖췄습니다.
+
+[사고 대응·정정 발행 ↗](https://github.com/boclair98/achim-gyeol/blob/main/docs/INCIDENT_RESPONSE.md) · [백업·복구 절차 ↗](https://github.com/boclair98/achim-gyeol/blob/main/docs/BACKUP_AND_RESTORE.md)
+
+---
+
+<h2 id="featured-systems">06 / 서비스별 설계 · Selected Systems</h2>
+
+서비스 이름을 펼치면 설계·기술 스택·구현 범위를 읽을 수 있습니다.
+
+<details>
+<summary><strong>03. MORROW — 약속까지 이어지는 소셜 디스커버리</strong></summary>
 
 > 상호 관심 이후 **MORROW Sync → 실시간 채팅 → 장소·시간 제안 → 안전 확인**까지 이어지는 만 20세 이상 서비스입니다.
 
@@ -217,9 +263,11 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[서비스 사용하기 ↗](https://morrow.coders.kr)** · **[Source Code](https://github.com/boclair98/morrow)**
 
-<br />
+</details>
 
-### 04. HYUNDAI LIFE PASS — Connected Car Life 파일럿
+
+<details>
+<summary><strong>04. HYUNDAI LIFE PASS — Connected Car Life 파일럿</strong></summary>
 
 > 충전소·서비스 거점 탐색과 동의 기반 차량 연동 구조, 차량 여권과 **읽기 전용 OTA Canary Lab**을 구성한 모빌리티 파일럿입니다.
 
@@ -234,9 +282,11 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[공개 파일럿 ↗](https://hyundai-life-pass.coders.kr)** · **[Source Code](https://github.com/boclair98/hyundai-life-pass)**
 
-<br />
+</details>
 
-### 05. YieldScope P&T — 반도체 양산 품질 워크벤치
+
+<details>
+<summary><strong>05. YieldScope P&T — 반도체 양산 품질 워크벤치</strong></summary>
 
 > Test Program qualification부터 **LOT 격리·판정 → FA/RCA → CAPA 검증 → 교대 인계**까지 재현한 P&T 품질 의사결정 워크벤치입니다.
 
@@ -252,11 +302,17 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[공개 데모 ↗](https://yieldscope-pnt.coders.kr)** · **[Source Code](https://github.com/boclair98/yieldscope-pnt)**
 
+</details>
+
+
 ---
 
-<h2 id="more-products">05 · More Deployed Systems</h2>
+<h2 id="more-products">07 / More Deployed Systems</h2>
 
-### 06. 검은 자정 — 실시간 소셜 추리 게임
+서비스 이름을 펼치면 설계·기술 스택·구현 범위를 읽을 수 있습니다.
+
+<details>
+<summary><strong>06. 검은 자정 — 실시간 소셜 추리 게임</strong></summary>
 
 4~12명이 밤 행동, 현장 단서, 음성 토론과 공개 투표 기록을 대조하며 혼자서는 규칙 기반 AI 7명과 플레이하는 모바일 우선 게임입니다.
 
@@ -269,9 +325,11 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[게임 시작하기 ↗](https://black-midnight.coders.kr)** · **[Source Code](https://github.com/boclair98/mafia-game)**
 
-<br />
+</details>
 
-### 07. 날씨한편 — 맞춤 날씨 · 이메일 브리핑
+
+<details>
+<summary><strong>07. 날씨한편 — 맞춤 날씨 · 이메일 브리핑</strong></summary>
 
 기상청·에어코리아·Kakao 원천자료를 위치와 활동 목적에 맞는 외출 판단으로 바꾸고 사용자가 지정한 아침·점심·저녁 시각에 이메일로 전달합니다.
 
@@ -282,9 +340,11 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[날씨한편 열기 ↗](https://weather.coders.kr)** · **[Source Code](https://github.com/boclair98/Weather)**
 
-<br />
+</details>
 
-### 08. 살도 · Saldobook — 개인 금융 기록 서비스
+
+<details>
+<summary><strong>08. 살도 · Saldobook — 개인 금융 기록 서비스</strong></summary>
 
 직접 기록한 수입·지출과 예산을 바탕으로 오늘의 안심 사용액, 월말 예상 지출과 소비 흐름을 보여주는 개인 금융 서비스입니다.
 
@@ -296,9 +356,11 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[살도 사용하기 ↗](https://saldobook.coders.kr)** · **[Source Code](https://github.com/boclair98/saldobook)**
 
-<br />
+</details>
 
-### 09. Trading Stock System — 매매체결 · 주문 안전성 검증
+
+<details>
+<summary><strong>09. Trading Stock System — 매매체결 · 주문 안전성 검증</strong></summary>
 
 국내 주식시장과 대체거래소 환경을 가정해 주문 접수부터 매칭, 체결, 복구와 감사 이벤트까지 검증하는 엔지니어링 콘솔입니다.
 
@@ -312,9 +374,12 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 **[공개 콘솔 ↗](https://tradingstocksysyem.coders.kr)** · **[Source Code](https://github.com/boclair98/TradingStockSysyem)**
 
+</details>
+
+
 ---
 
-<h2 id="selected-projects">06 · Selected Projects</h2>
+<h2 id="selected-projects">08 / Engineering Projects</h2>
 
 - **[MeetPlace](https://github.com/boclair98/MeetPlace)** — 2~8명의 출발지에서 평균·최대 이동거리와 편차를 계산하고 Kakao Local·Google Places의 실제 장소를 점수화하는 약속 장소 추천 서비스
 - **[Question](https://github.com/boclair98/Question)** — 직무별 랜덤 질문, 질문 확인·답변 타이머, 세션 인증과 질문 기록을 구현한 면접 연습 서비스
@@ -322,7 +387,7 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 ---
 
-<h2 id="writing">07 · Engineering Notes</h2>
+<h2 id="writing">09 / Engineering Notes</h2>
 
 구현 결과만 남기지 않고 Java, Spring Boot, 데이터베이스, 인프라와 문제 해결 과정을 글과 코드로 기록합니다.
 
@@ -340,7 +405,6 @@ Docker 배포, CI 품질 게이트, 상태 점검, 운영 지표와 복구 절�
 
 <strong>Design · Build · Verify · Deploy · Observe · Improve</strong>
 
-<sub>운영 가능한 제품을 만들고, 근거를 남기며, 계속 개선합니다.</sub>
+<sub>만들고, 검증하고, 기록합니다. 다음 구현에 도움이 되는 코드가 남도록.</sub>
 
 </div>
-
