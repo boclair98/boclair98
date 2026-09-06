@@ -27,9 +27,9 @@ PostgreSQL · Redis · WebSocket · Docker · GitHub Actions
 
 </div>
 
-<table>
+<table align="center">
 <tr>
-<td width="50%" valign="top">
+<td width="440" valign="top">
 <sub>01 / FINTECH · PAPER TRADING</sub>
 <h3>StockPilot</h3>
 <p><strong>실제 시세로 배우는 모의투자</strong></p>
@@ -37,7 +37,7 @@ PostgreSQL · Redis · WebSocket · Docker · GitHub Actions
 <p><code>FastAPI</code> <code>PostgreSQL</code> <code>Redis</code></p>
 <p><a href="https://stockpilot.coders.kr"><strong>서비스 열기 ↗</strong></a> &nbsp;·&nbsp; <a href="https://github.com/boclair98/stockpilot">코드</a></p>
 </td>
-<td width="50%" valign="top">
+<td width="440" valign="top">
 <sub>02 / NEWS · DAILY BRIEFING</sub>
 <h3>아침결</h3>
 <p><strong>매일 07:30, 오늘의 뉴스 브리핑</strong></p>
