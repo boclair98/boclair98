@@ -1,0 +1,73 @@
+name: Portfolio production monitor
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check-service:
+    name: Check ${{ matrix.service }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - service: StockPilot
+            url: https://stockpilot.coders.kr/
+          - service: 아침결
+            url: https://morningnews.coders.kr/
+          - service: MORROW
+            url: https://morrow.coders.kr/
+          - service: 날씨한편
+            url: https://weather.coders.kr/
+          - service: 살도
+            url: https://saldobook.coders.kr/
+          - service: 검은 자정
+            url: https://black-midnight.coders.kr/
+          - service: HYUNDAI LIFE PASS
+            url: https://hyundai-life-pass.coders.kr/
+          - service: YieldScope P&T
+            url: https://yieldscope-pnt.coders.kr/
+          - service: Trading Stock System
+            url: https://tradingstocksysyem.coders.kr/
+
+    steps:
+      - name: Check public service
+        env:
+          SERVICE_NAME: ${{ matrix.service }}
+          SERVICE_URL: ${{ matrix.url }}
+        shell: bash
+        run: |
+          set +e
+          result="$(curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location \
+            --retry 3 \
+            --retry-all-errors \
+            --retry-delay 2 \
+            --max-time 30 \
+            --output /dev/null \
+            --write-out 'HTTP %{http_code}; total %{time_total}s' \
+            "$SERVICE_URL" 2>&1)"
+          exit_code=$?
+          set -e
+
+          {
+            echo "## $SERVICE_NAME"
+            echo "- URL: $SERVICE_URL"
+            echo "- Result: $result"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "$exit_code" -ne 0 ]; then
+            echo "$SERVICE_NAME failed: $result" >&2
+            exit "$exit_code"
+          fi
+
+          echo "$SERVICE_NAME is reachable: $result"
