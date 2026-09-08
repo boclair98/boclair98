@@ -15,6 +15,11 @@
   <a href="#writing"><b>Writing</b></a>
 </p>
 
+<p>
+<a href="https://coders.kr"><strong>coders.kr ↗</strong></a><br />
+<sub>아이디어를 코드로, 코드를 서비스로. 직접 만드는 서비스의 도메인.</sub>
+</p>
+
 </div>
 
 ---
