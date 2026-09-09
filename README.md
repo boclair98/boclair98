@@ -74,6 +74,7 @@
 | **HYUNDAI LIFE PASS** | 충전소·서비스 거점 탐색과 차량 관리 흐름을 연결한 비공식 커넥티드카 파일럿 | [파일럿 ↗](https://hyundai-life-pass.coders.kr) · [Source](https://github.com/boclair98/hyundai-life-pass) |
 | **YieldScope P&T** | LOT 판정·원인 분석·개선 조치·교대 인계를 체험하는 반도체 품질 워크벤치 · 합성 데이터 데모 | [데모 ↗](https://yieldscope-pnt.coders.kr) · [Source](https://github.com/boclair98/yieldscope-pnt) |
 | **Trading Stock System** | 주문 매칭·체결·재생 복구를 검증하는 엔지니어링 콘솔 · 실주문 차단 | [콘솔 ↗](https://tradingstocksysyem.coders.kr) · [Source](https://github.com/boclair98/TradingStockSysyem) |
+| **안심생활** | 공공혜택 탐색·조건·서류 준비와 공식 신청 이후 진행기록을 연결하는 신청 내비게이터 | [서비스 ↗](https://ansimlife.coders.kr) · [Source](https://github.com/boclair98/ansimlife) |
 
 <details>
 <summary>구현 범위와 운영 제약</summary>
@@ -180,6 +181,8 @@
 <h2 id="operations">04 / Runbooks · 배포 이후의 기준</h2>
 
 운영 판단과 복구 절차는 문서로 남깁니다. 아래 링크에서 점검 항목과 대응 순서를 확인할 수 있습니다.
+전체 포트폴리오를 10분 관찰과 하루 4회 배치로 운영하는 기준은
+[자율 운영 헌장](./AUTONOMOUS_PORTFOLIO_PM.md)에서 확인할 수 있습니다.
 
 | 문서 | 확인할 내용 |
 | :--- | :--- |
