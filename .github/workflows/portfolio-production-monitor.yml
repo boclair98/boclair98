@@ -35,6 +35,8 @@ jobs:
             url: https://yieldscope-pnt.coders.kr/
           - service: Trading Stock System
             url: https://tradingstocksysyem.coders.kr/
+          - service: 안심생활
+            url: https://ansimlife.coders.kr/
 
     steps:
       - name: Check public service
