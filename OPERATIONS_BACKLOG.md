@@ -4,16 +4,17 @@
 
 ## 대상 확인
 
-현재 확인은 GitHub 저장소의 관리 이력·README 또는 homepage의 Coders.kr URL·2026-09-10 운영 URL HTTP 응답·Coders 배포 상태를 기준으로 했다.
-이번 배치에서는 Coders source를 원본 저장소로 재배포하고, `coders-kr` 실제 fork parent·기본 브랜치 SHA·브라우저 첫 화면까지 추가 확인했다.
-과거 작업 이름과 고정 21개 목록은 편입 근거가 아니다.
+현재 확인은 GitHub 전체 31개 저장소의 관리 이력·README 또는 homepage의 Coders.kr URL·2026-09-10 운영 URL HTTP 응답·Coders 배포 상태를 기준으로 했다.
+이번 배치에서는 고정 10개 목록을 제거한 동적 discovery를 실행해 고유 Coders URL 후보 14개를 찾고, 그중 active 13개와 연구용 demo 1개를 판정했다.
+active 서비스는 Coders source를 원본 저장소로 확인하고, `coders-kr` 실제 fork parent·기본 브랜치 SHA·브라우저 첫 화면까지 추가 확인했다.
+과거 작업 이름과 고정 21개 또는 10개 목록은 편입 근거가 아니다.
 
 ## 확인된 운영 서비스
 
 | 저장소 | 운영 URL | 연결 증거 | 확인 커밋 | 확인 시각 | 상태 |
 | --- | --- | --- | --- | --- | --- |
 | Weather | https://weather.coders.kr | README + HTTP 200 + Coders ready + 브라우저 렌더링 | 56ef0a5f19e96e15f1786e825f5df74e1deeeea7 | 2026-09-10 | active |
-| ansimlife | https://ansimlife.coders.kr | homepage/README + HTTP 200 + Coders ready + 브라우저 렌더링 | 0a87fc51f969b03b2536fd25638ecd14e9352737 | 2026-09-10 | active |
+| ansimlife | https://ansimlife.coders.kr | homepage/README + HTTP 200 + Coders ready + 브라우저 렌더링 | dc291da937c692653d5285cc8ed4dfa363be1c66 | 2026-09-10 | active |
 | hyundai-life-pass | https://hyundai-life-pass.coders.kr | homepage + HTTP 200 + Coders ready + 브라우저 렌더링 | 377593d849eaacd1bef199d02f0839a9dfa4f184 | 2026-09-10 | active |
 | yieldscope-pnt | https://yieldscope-pnt.coders.kr | homepage + HTTP 200 + Coders ready + 브라우저 렌더링 | 26a1025df8d91f57bc1e8a38a5e176a3a3f4ae58 | 2026-09-10 | active |
 | morrow | https://morrow.coders.kr | homepage + HTTP 200 + Coders ready + 브라우저 렌더링 | 7cdb01a6e3f066b19ff2a5327947bb157615bb9e | 2026-09-10 | active |
@@ -22,6 +23,15 @@
 | mafia-game | https://black-midnight.coders.kr | homepage + HTTP 200 + Coders ready + 브라우저 렌더링 | f78b7fb48d416675382971310ec5e5e02055f420 | 2026-09-10 | active |
 | saldobook | https://saldobook.coders.kr | README + HTTP 200 + Coders ready + 브라우저 렌더링 | 12a94e95686eae0d087c3f4c6f396345a3251cd9 | 2026-09-10 | active |
 | TradingStockSysyem | https://tradingstocksysyem.coders.kr | README + HTTP 200 + Coders ready + 브라우저 렌더링 | dfc1ed0d52cd5806922a196c449445948c1b0600 | 2026-09-10 | active |
+| kkoong | https://segulja-kkung.coders.kr | README + 최근 관리 커밋 + Coders ready + 실제 게임 화면 + 새 fork SHA 일치 | 10ea5f215641d80cc50d148bd6dd78d5d689af9b | 2026-09-10 | active |
+| turbo-rush | https://turbo-rush.coders.kr | homepage/README + 최근 관리 커밋 + Coders ready + 실제 게임 화면 + fork SHA 일치 | b0e17914544b7b191946aefd7cfd8a296f4598d2 | 2026-09-10 | active |
+| moa-budget | https://moa-budget.coders.kr | README + 로그인 가능한 가계부 화면 + Coders ready + 새 fork SHA 일치 | c6eea9e395dff408ee9f186c2e60cc7aeb9d5baf | 2026-09-10 | active |
+
+## 운영 대상에서 제외한 후보
+
+| 저장소 | 운영 URL | 제외 근거 | 상태 |
+| --- | --- | --- | --- |
+| haesudamsuhwa_project_streamlit | https://haesudamsuhwa.coders.kr | URL과 화면은 응답하지만 README와 첫 화면이 2021년 기록을 재생하는 읽기 전용 연구용 프로토타입이며 실시간 설비 연동이 아님을 명시 | excluded/demo |
 
 ## 누적 개선 항목
 
@@ -35,8 +45,10 @@
 | --- | --- | --- | --- |
 | 2026-09-10 | active 10개 | 원본 `main` 최신 커밋을 Coders 기존 프로젝트에 재배포하고, `coders-kr` 실제 fork parent·기본 브랜치를 대조 | 10/10 배포 `ready`, 10/10 HTTP 200, 10/10 브라우저 첫 화면 렌더링 |
 | 2026-09-10 | ansimlife | 혜택 검색 실패 복구와 로딩 접근성 개선을 구현·검증하고 원본 merge → fork sync → Coders 재배포 | Java 21 CI pass, `dc291da...` 원본·fork SHA 일치, deployment `c123eb16-4e81-4f32-b6e8-96514e655394` ready, 운영 페이지·정상 검색 렌더링 확인 |
+| 2026-09-10 | GitHub 전체 동적 discovery | 원본 `main`의 10개 고정 matrix를 제거하고 GitHub 저장소 전체 페이지 조회·Coders URL 후보 추출·서비스별 중복 제거를 구현·실행 | workflow `34439754083` success, 31개 저장소 스캔, 고유 후보 14개, active 13개·demo 제외 1개, 14개 URL HTTP 200 |
+| 2026-09-10 | kkoong·moa-budget | 새 active 서비스의 실제 `coders-kr` fork 생성 → canonical SHA 동기화 → Coders 기존 프로젝트 재배포 | `kkoong` SHA `10ea5f2...` 일치·deployment `a3ca507e-8857-4994-924a-ad4ea6ce226a` ready, `moa-budget` SHA `c6eea9e...` 일치·deployment `f108c3a3-53f7-4172-9bc9-3667fd582f6e` ready, 두 URL HTTP 200·브라우저 렌더링 확인 |
 
-이번 실행은 원본에 새 기능 커밋을 추가한 배치가 아니라, 누적된 최신 원본 상태를 운영 환경에 반영한 재배포 배치다. 다음 AI 배치부터는 이 원장과 10분 경량 수집 결과를 바탕으로 실제 코드 변경이 필요한 서비스만 구현·테스트·merge·fork 동기화·배포한다.
+이번 실행은 새 서비스 발견과 운영 편입, 동적 모니터링 구조 보완, 새 active 서비스 fork·재배포를 포함한 배치다. 다음 AI 배치부터는 이 원장과 10분 경량 수집 결과를 바탕으로 발견된 active 서비스 전체를 순환 검토하고, 실제 코드 변경이 필요한 서비스만 구현·테스트·merge·fork 동기화·배포한다.
 
 ### 2026-09-10 배포 식별자
 
@@ -52,6 +64,8 @@
 | mafia-game | `black-midnight` | `d7ac0f63-844f-45fe-9e60-ea2153ed4362` | ready |
 | saldobook | `saldobook` | `9a432c91-e9c2-4908-9a86-c26b2558d172` | ready |
 | TradingStockSysyem | `tradingstocksysyem` | `8cbe217b-dfe8-4005-b41c-fe16d2ecb2e4` | ready |
+| kkoong | `segulja-kkung` | `a3ca507e-8857-4994-924a-ad4ea6ce226a` | ready |
+| moa-budget | `moa-budget` | `f108c3a3-53f7-4172-9bc9-3667fd582f6e` | ready |
 
 ## 기록 규칙
 
