@@ -83,23 +83,29 @@ jobs:
 
               # This is deliberately a candidate inventory. Codex performs the
               # deeper source/deployment/ownership decision before activation.
+              # Normalize paths and query strings so one service produces one job.
               confidence=$((homepage_match * 2 + name_match))
               jq -nc \
                 --arg repo "$repo_name" \
                 --arg repo_url "https://github.com/$SOURCE_OWNER/$repo_name" \
                 --arg branch "$default_branch" \
-                --arg url "$url" \
+                --arg discovered_url "$url" \
                 --arg slug "$slug" \
                 --arg pushed_at "$pushed_at" \
                 --argjson confidence "$confidence" \
+                --argjson homepage_match "$homepage_match" \
+                --argjson name_match "$name_match" \
                 '{
                   repo: $repo,
                   repo_url: $repo_url,
                   default_branch: $branch,
-                  url: $url,
+                  url: ("https://" + $slug + ".coders.kr/"),
+                  discovered_url: $discovered_url,
                   slug: $slug,
                   pushed_at: $pushed_at,
                   confidence: $confidence,
+                  homepage_match: $homepage_match,
+                  name_match: $name_match,
                   state: "candidate"
                 }' >> "$work_dir/candidates.jsonl"
             done <<< "$urls"
@@ -107,9 +113,9 @@ jobs:
 
           if [ -s "$work_dir/candidates.jsonl" ]; then
             jq -s '
-              sort_by(.confidence) |
-              group_by(.url) |
-              map(max_by(.confidence)) |
+              sort_by([.slug, .confidence, .homepage_match, .name_match, .pushed_at]) |
+              group_by(.slug) |
+              map(last) |
               sort_by(.repo)
             ' "$work_dir/candidates.jsonl" > "$work_dir/services.json"
           else
