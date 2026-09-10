@@ -9,185 +9,85 @@ permissions:
   contents: read
 
 jobs:
-  discover-services:
-    name: Discover GitHub managed Coders.kr services
-    runs-on: ubuntu-latest
-    timeout-minutes: 10
-    outputs:
-      services: ${{ steps.discover.outputs.services }}
-      count: ${{ steps.discover.outputs.count }}
-    steps:
-      - name: Discover production URLs from GitHub
-        id: discover
-        env:
-          GH_TOKEN: ${{ github.token }}
-          SOURCE_OWNER: ${{ github.repository_owner }}
-        shell: bash
-        run: |
-          set -Eeuo pipefail
-          work_dir="$RUNNER_TEMP/coders-service-discovery"
-          mkdir -p "$work_dir"
-          : > "$work_dir/candidates.jsonl"
-
-          gh repo list "$SOURCE_OWNER" \
-            --limit 200 \
-            --json name,isArchived,pushedAt,homepageUrl \
-            > "$work_dir/repositories.json"
-
-          while IFS= read -r repo_json; do
-            repo_name="$(jq -r '.name' <<< "$repo_json")"
-            is_archived="$(jq -r '.isArchived' <<< "$repo_json")"
-            pushed_at="$(jq -r '.pushedAt // ""' <<< "$repo_json")"
-            homepage="$(jq -r '.homepageUrl // ""' <<< "$repo_json")"
-
-            if [ "$is_archived" = "true" ]; then
-              continue
-            fi
-
-            readme_b64="$(gh api "repos/$SOURCE_OWNER/$repo_name/readme" --jq '.content' 2>/dev/null || true)"
-            readme=""
-            if [ -n "$readme_b64" ]; then
-              readme="$(printf '%s' "$readme_b64" | tr -d '\n' | base64 -d 2>/dev/null || true)"
-            fi
-
-            urls="$(
-              printf '%s\n%s\n' "$homepage" "$readme" |
-                grep -Eo 'https://[[:alnum:]-]+\.coders\.kr([/?#][^[:space:]<>"]*)?' |
-                sed -E 's/[),.;]+$//' |
-                sort -u || true
-            )"
-
-            while IFS= read -r url; do
-              [ -n "$url" ] || continue
-
-              slug="$(printf '%s' "$url" | sed -E 's#https://([^./]+)\.coders\.kr.*#\1#')"
-              repo_key="$(printf '%s' "$repo_name" | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]')"
-              slug_key="$(printf '%s' "$slug" | tr '[:upper:]' '[:lower:]' | tr -cd '[:alnum:]')"
-              homepage_match=0
-              name_match=0
-
-              if printf '%s' "$homepage" | grep -Fqi "$slug.coders.kr"; then
-                homepage_match=1
-              fi
-              if [ "$repo_key" = "$slug_key" ]; then
-                name_match=1
-              fi
-
-              confidence=$((homepage_match * 2 + name_match))
-              jq -nc \
-                --arg repo "$repo_name" \
-                --arg repo_url "https://github.com/$SOURCE_OWNER/$repo_name" \
-                --arg url "$url" \
-                --arg slug "$slug" \
-                --arg pushed_at "$pushed_at" \
-                --argjson confidence "$confidence" \
-                '{
-                  repo: $repo,
-                  repo_url: $repo_url,
-                  url: $url,
-                  slug: $slug,
-                  pushed_at: $pushed_at,
-                  confidence: $confidence,
-                  state: "candidate"
-                }' >> "$work_dir/candidates.jsonl"
-            done <<< "$urls"
-          done < <(jq -c '.[] | select(.isArchived == false)' "$work_dir/repositories.json")
-
-          if [ -s "$work_dir/candidates.jsonl" ]; then
-            jq -s '
-              sort_by(.confidence) |
-              group_by(.url) |
-              map(max_by(.confidence))
-            ' "$work_dir/candidates.jsonl" > "$work_dir/services.json"
-          else
-            echo '[]' > "$work_dir/services.json"
-          fi
-
-          services_json="$(jq -c '.' "$work_dir/services.json")"
-          echo "services=$services_json" >> "$GITHUB_OUTPUT"
-          echo "count=$(jq 'length' "$work_dir/services.json")" >> "$GITHUB_OUTPUT"
-
-          {
-            echo "## Dynamic Coders.kr discovery"
-            echo "- GitHub owner: $SOURCE_OWNER"
-            echo "- Candidate services: $(jq 'length' "$work_dir/services.json")"
-            echo
-            jq -r '.[] | "- \(.repo) → \(.url) [candidate]"' "$work_dir/services.json"
-          } >> "$GITHUB_STEP_SUMMARY"
-
-      - name: Upload discovered inventory
-        uses: actions/upload-artifact@v4
-        with:
-          name: coders-service-discovery
-          path: ${{ runner.temp }}/coders-service-discovery/services.json
-          if-no-files-found: error
-          retention-days: 7
-
   check-service:
-    name: Check ${{ matrix.service.repo }} / ${{ matrix.service.slug }}
-    needs: discover-services
-    if: needs.discover-services.outputs.count != '0'
+    name: Check ${{ matrix.service }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     strategy:
       fail-fast: false
       matrix:
-        service: ${{ fromJSON(needs.discover-services.outputs.services) }}
+        include:
+          - service: StockPilot
+            url: https://stockpilot.coders.kr/
+          - service: 아침결
+            url: https://morningnews.coders.kr/
+          - service: MORROW
+            url: https://morrow.coders.kr/
+          - service: 날씨한편
+            url: https://weather.coders.kr/
+          - service: 살도
+            url: https://saldobook.coders.kr/
+          - service: 검은 자정
+            url: https://black-midnight.coders.kr/
+          - service: HYUNDAI LIFE PASS
+            url: https://hyundai-life-pass.coders.kr/
+          - service: YieldScope P&T
+            url: https://yieldscope-pnt.coders.kr/
+          - service: Trading Stock System
+            url: https://tradingstocksysyem.coders.kr/
+          - service: 안심생활
+            url: https://ansimlife.coders.kr/
 
     steps:
       - name: Check public service
         env:
-          SERVICE_REPOSITORY: ${{ matrix.service.repo }}
-          SERVICE_SLUG: ${{ matrix.service.slug }}
-          SERVICE_URL: ${{ matrix.service.url }}
+          SERVICE_NAME: ${{ matrix.service }}
+          SERVICE_URL: ${{ matrix.url }}
         shell: bash
         run: |
           set +e
-          result="$(
-            curl \
-              --fail \
-              --silent \
-              --show-error \
-              --location \
-              --retry 3 \
-              --retry-all-errors \
-              --retry-delay 2 \
-              --max-time 30 \
-              --output /dev/null \
-              --write-out 'HTTP %{http_code}; total %{time_total}s' \
-              "$SERVICE_URL" 2>&1
-          )"
+          result="$(curl \
+            --fail \
+            --silent \
+            --show-error \
+            --location \
+            --retry 3 \
+            --retry-all-errors \
+            --retry-delay 2 \
+            --max-time 30 \
+            --output /dev/null \
+            --write-out 'HTTP %{http_code}; total %{time_total}s' \
+            "$SERVICE_URL" 2>&1)"
           exit_code=$?
           set -e
 
-          mkdir -p monitor-artifact
           {
-            echo "repository=$SERVICE_REPOSITORY"
-            echo "slug=$SERVICE_SLUG"
-            echo "url=$SERVICE_URL"
-            echo "result=$result"
-            echo "exit_code=$exit_code"
-            echo "checked_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
-          } > monitor-artifact/status.txt
-
-          {
-            echo "## $SERVICE_REPOSITORY / $SERVICE_SLUG"
+            echo "## $SERVICE_NAME"
             echo "- URL: $SERVICE_URL"
             echo "- Result: $result"
           } >> "$GITHUB_STEP_SUMMARY"
 
           if [ "$exit_code" -ne 0 ]; then
-            echo "$SERVICE_REPOSITORY / $SERVICE_SLUG failed: $result" >&2
+            echo "$SERVICE_NAME failed: $result" >&2
             exit "$exit_code"
           fi
 
-          echo "$SERVICE_REPOSITORY / $SERVICE_SLUG is reachable: $result"
+          echo "$SERVICE_NAME is reachable: $result"
+
+          mkdir -p monitor-artifact
+          {
+            echo "service=$SERVICE_NAME"
+            echo "url=$SERVICE_URL"
+            echo "result=$result"
+            echo "exit_code=$exit_code"
+            echo "checked_at=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          } > "monitor-artifact/status.txt"
 
       - name: Upload lightweight observation
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: monitor-${{ matrix.service.repo }}-${{ matrix.service.slug }}
+          name: monitor-${{ matrix.service }}
           path: monitor-artifact/status.txt
           if-no-files-found: ignore
           retention-days: 7

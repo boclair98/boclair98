@@ -1,18 +1,3 @@
-# 최신 실행 규칙 — 동적 서비스 편입과 자동 배포
-이 규칙은 문서의 이전 설명보다 우선한다.
-- 매 10분 GitHub Actions가 SOURCE_OWNER의 저장소를 페이지 끝까지 조회한다.
-- 저장소의 homepage, README, 관련 Markdown, 배포 설정에서 coders.kr production URL을 발견한다.
-- 새 URL은 후보 inventory에 자동 추가하며, 다음 AI 배치에서 GitHub 관리 이력·Coders source 연결·현재 화면을 검증한다.
-- 후보는 검증 전 코드 수정·merge·배포하지 않는다. 검증을 통과하면 active 서비스로 자동 편입한다.
-- active 서비스에서 새로 발견된 URL, 저장소, fork, 배포 프로젝트도 같은 배치부터 자동 관리한다.
-- 00:00·08:00·12:00·18:00·21:00 배치는 누적 신호를 읽고 기능 수정·신규 기능·UI 개선·장애 예방을 실제 구현한다.
-- 검증이 끝난 변경은 canonical 원본 → 실제 coders-kr fork 동기화 → Coders.kr 기존 프로젝트 배포 → production 확인 순서로 자동 처리한다.
-- source가 없거나 관리 여부가 불명확하면 후보로 남기고 배포하지 않는다.
-- active 서비스가 일시 장애를 겪으면 제외하지 않고 incident로 복구한다.
-- 대상 수를 고정하지 않으며, 과거 21개 목록을 사용하지 않는다.
-- 10분 수집은 AI 판단이 아니며 Codex 토큰을 사용하지 않는다. AI 분석·구현·배포는 하루 5회 배치에 집중한다.
-- 모든 자동화 단계는 원장에 후보·active·incident·제외, 근거, commit SHA, PR, fork SHA, deployment status를 기록한다.
-
 # Coders.kr 운영 서비스 자동 고도화 실행 지침
 
 버전: 2026-09-10
@@ -207,3 +192,4 @@ force push, history rewrite, 파괴적인 DB 작업, 무승인 구매, 실주문
 권한·인증·외부 승인 없이 가능한 것처럼 꾸미지 않는다.
 컴퓨터 또는 실행기가 꺼져 있던 시간의 작업을 수행했다고 보고하지 않는다.
 실패한 단계와 필요한 조치를 숨기지 않는다.
+
